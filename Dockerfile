@@ -10,6 +10,7 @@ ENV COMPOSER_HOME /.composer
 COPY --from=composer:2 /usr/bin/composer /usr/local/bin/composer
 RUN mkdir -p $COMPOSER_HOME && \
     chown app:app $COMPOSER_HOME
+COPY ./composer.json /app
 
 ENV APP_DIR /app
 
