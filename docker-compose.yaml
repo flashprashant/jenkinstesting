@@ -3,6 +3,6 @@ services:
     build:
       context: .
     volumes:
-      - ./:/app
+      - ./:/home/jenkins/agent/workspace/test-self
     user: "${UID:-1000}:${GID:-1000}"
     command: "tail -f /dev/null"
